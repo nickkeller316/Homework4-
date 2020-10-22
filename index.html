@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to font for page -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+    <!-- Link to Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Quiz</title>
+</head>
+
+<body style="font-family: 'Alegreya', serif;">
+    <!-- Set a container for the body of the page  -->
+    <main class="container-lg">
+        <br>
+        <br>
+        <!-- *** MAKE SURE AND CHECK FOR RESPONSIVE AND USE SEMANTIC ELEMENTS -->
+
+        <!-- Header of 'Javascript Quiz'  -->
+        <!-- Set up a start quiz button with a timer display under it -->
+        <header class="row">
+            <section class="col-sm-12 text-center">
+                <h2>Javascript Quiz</h2>
+                <!-- Start button and badge that will contain the timer counter  -->
+                <button type="button" class="btn btn-success btn-lg mb-2" id="startQuiz">Start Quiz <span
+                        class="badge badge-light" id="counter">1000</span></button>
+
+                <h6>This quiz was created by Nick Keller for DU bootcamp homework 4</h6>
+                <hr>
+            </section>
+
+        </header>
+        <!-- Then have two side by side cards, one for the quiz itself and one to see highscores -->
+        <section class="row">
+            <article class="col-md-8">
+                <!-- Question Card  -->
+                <div class="card" style="width: 100%">
+                    <!-- heading and question text  -->
+                    <div class="card-body">
+                        <h5 id="questionNumber" class="card-title text-primary font-weight-bold">Questions...</h5>
+                        <h6 id="questionText" class="card-text font-weight-bold"> Click the start quiz button to begin! Your score is represented by the time remaining in the timer below 'start quiz'. 50 points are deducted for each wrong answer.
+                        </h6>
+                    </div>
+                    <!-- List of answers (3)  -->
+                    <ul class="list-group list-group-flush">
+                        <li id="answer1" class="list-group-item"><button id="answer1Button" type="button"
+                                class="btn btn-primary btn-sm">1</button>
+                            ---</li>
+                        <li id="answer2" class="list-group-item"><button id="answer2Button" type="button"
+                                class="btn btn-primary btn-sm">2</button>
+                            ---</li>
+                        <li id="answer3" class="list-group-item"><button id="answer3Button" type="button"
+                                class="btn btn-primary btn-sm">3</button>
+                            ---</li>
+                    </ul>
+                </div>
+                <!-- Form for entering high score initials.  Stays hidden until a high score is noted. -->
+                <!-- d-none is used to hide -->
+                <form id="highScoreForm" class="float-left align-top d-none">
+                  <div class="form-group">
+                      <br>
+                      <h3 class="text-danger">HIGH SCORE!</h3>
+                      <label for="exampleInputEmail1">Enter your initials</label>
+                      <input type="text" class="form-control" id="userInitials"></input>
+                  </div>
+                  <button id="submitInitials" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </article>
+            <article class="col-md-4">
+                <!-- High Score Card  -->
+                <aside class="card" style="width: 100%">
+                    <!-- <img src="https://lh3.googleusercontent.com/proxy/OpLKm_xDk38y1dksDm7NpIAchYMFGoHf9bi1TKewP5Z7LXalykXJZIulNKzCUkwjPzrWIwATsOJZZdHUER5MLuCEXBnvg14hCTAXMS7xvHw" -->
+                    <img src="https://lh3.googleusercontent.com/proxy/OpLKm_xDk38y1dksDm7NpIAchYMFGoHf9bi1TKewP5Z7LXalykXJZIulNKzCUkwjPzrWIwATsOJZZdHUER5MLuCEXBnvg14hCTAXMS7xvHw"
+                        class="card-img-top" alt="High Scores">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary font-weight-bold">High Scores</h5>
+                        <h6 class="card-text font-weight-bold">Top 5 High Scores</h6>
+                    </div>
+                    <!-- List of top 5 high scores  -->
+                    <ul class="list-group list-group-flush">
+                        <li id="user1" class="list-group-item">---</li>
+                        <li id="user2" class="list-group-item">---</li>
+                        <li id="user3" class="list-group-item">---</li>
+                        <li id="user4" class="list-group-item">---</li>
+                        <li id="user5" class="list-group-item">---</li>
+                    </ul>
+
+                </aside>
+                
+                
+            </article>
+            
+
+        </section>
+
+    </main>
+
+    <!-- Link to Javascript file -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
